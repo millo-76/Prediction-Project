@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# ML artifacts
+*.joblib
+*.pkl
+
+# Data files you may not want tracked
+data/raw/*
+data/processed/*
+
+# Keep folders
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Node
+node_modules/
+dist/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment
+.env
