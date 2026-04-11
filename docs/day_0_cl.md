@@ -1,4 +1,4 @@
-## Day 0 Checklist
+# Day 0 Checklist
 
 - [X] Create the root project folder
 - [X] Initialize git
