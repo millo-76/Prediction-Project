@@ -34,15 +34,34 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ## Day 2 – Schema Definition
 
-- [ ] Define what one row represents (1 match)
-- [ ] Finalize raw schema fields
-- [ ] Map dataset columns → project schema
-- [ ] Identify missing required fields
-- [ ] Decide how to handle:
-  - [ ] missing values
-  - [ ] inconsistent team names
-  - [ ] patch formatting
-- [ ] Update `docs/data-notes.md` with mapping decisions
+- [X] Load raw dataset
+- [X] Filter to `datacompleteness == "complete"`
+- [X] Filter to `position == "team"`
+- [X] Keep only core columns:
+  - [X] gameid
+  - [X] date
+  - [X] patch
+  - [X] league
+  - [X] side
+  - [X] teamname
+  - [X] result
+- [X] Group rows by `gameid`
+- [X] Confirm each grouped match has exactly 2 rows
+- [X] Extract blue team row
+- [X] Extract red team row
+- [X] Create match-level records with:
+  - [X] gameid
+  - [X] date
+  - [X] patch
+  - [X] league
+  - [X] blue_team
+  - [X] red_team
+  - [X] blue_side_win
+- [X] Convert records into a new dataframe
+- [X] Preview the new dataframe
+- [X] Check for nulls or bad rows
+- [X] Save to `data/processed/processed_matches.csv`
+- [X] Document results in notes
 
 ---
 
