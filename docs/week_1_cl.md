@@ -65,16 +65,21 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ---
 
-## Day 3 – Data Cleaning Exploration
+## Day 3 Checklist
 
-- [ ] Load dataset into notebook/script
-- [ ] Normalize team names (basic pass)
-- [ ] Inspect unique team values
-- [ ] Check for duplicate matches
-- [ ] Check for null values in key columns
-- [ ] Filter out invalid or incomplete rows
-- [ ] Verify target column (`blue_side_win`) can be created
-- [ ] Document cleaning steps in notes
+- [X] Sort dataset by date
+- [X] Initialize team tracking dictionary
+- [X] Loop through matches sequentially
+- [X] Compute pre-match win rates
+- [X] Add features:
+  - [X] blue_team_wr
+  - [X] red_team_wr
+  - [X] blue_team_games
+  - [X] red_team_games
+- [X] Update stats after each match
+- [X] Create feature dataframe
+- [X] Validate values (0–1 range)
+- [X] Save to processed file
 
 ---
 
