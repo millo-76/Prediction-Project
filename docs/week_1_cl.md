@@ -83,16 +83,18 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ---
 
-## Day 4 – Preprocessing Script (v1)
+## Day 4 Checklist
 
-- [ ] Begin `backend/ml/preprocess.py`
-- [ ] Load raw dataset from `data/raw/`
-- [ ] Select only required columns
-- [ ] Rename columns to match schema
-- [ ] Create `blue_side_win` column
-- [ ] Drop unnecessary columns
-- [ ] Save output to `data/processed/processed_matches.csv`
-- [ ] Run script successfully end-to-end
+- [X] Load feature dataset
+- [X] Add wr_diff feature
+- [X] Define X (features) and y (target)
+- [X] Perform train/test split
+- [X] Train Logistic Regression model
+- [X] Generate predictions
+- [X] Evaluate accuracy
+- [X] Print classification report
+- [X] Inspect model coefficients
+- [X] Test probability predictions
 
 ---
 
