@@ -119,20 +119,40 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ---
 
-## Day 6 – Model Planning
+## Day 6 – Baseline Model Formalization
 
-- [ ] Confirm model type: Logistic Regression
-- [ ] Define target variable: `blue_side_win`
-- [ ] Decide train/test split (e.g., 80/20)
-- [ ] Decide encoding strategy:
-  - [ ] team names (one-hot or label encoding)
-  - [ ] patch
-  - [ ] region
-- [ ] Define evaluation metrics:
-  - [ ] accuracy
-  - [ ] precision
-  - [ ] recall
-- [ ] Outline `train.py` structure
+- [X] Confirm final Phase 1 feature set:
+  - [X] wr_diff
+  - [X] blue_team_games
+  - [X] red_team_games
+- [X] Confirm target variable:
+  - [X] blue_side_win
+- [X] Confirm train/test split:
+  - [X] 80/20
+  - [X] random_state=42
+- [X] Confirm evaluation metrics:
+  - [X] accuracy
+  - [X] precision
+  - [X] recall
+  - [X] f1-score
+- [X] Move model training logic into `backend/ml/train.py`
+- [X] Load processed feature dataset inside `train.py`
+- [X] Train Logistic Regression model inside script
+- [X] Print evaluation results from script
+- [X] Print coefficient table from script
+- [X] Save trained model artifact
+- [X] Save run notes / results summary
+
+### Prediction Pipeline
+
+- [ ] Create `predict.py`
+- [ ] Load saved model artifact
+- [ ] Define prediction function
+- [ ] Accept feature inputs
+- [ ] Return:
+  - [ ] predicted class
+  - [ ] probability
+- [ ] Test prediction locally
 
 ---
 
