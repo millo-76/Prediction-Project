@@ -1,11 +1,11 @@
+# predict.py
+# 04/16/2026 Version 1.0.0
+
 from pathlib import Path
 import joblib
-import numpy as np
 import pandas as pd
 
-
 MODEL_PATH = Path("backend/ml/artifacts/logreg_baseline.joblib")
-
 
 def load_model():
     if not MODEL_PATH.exists():
@@ -18,7 +18,6 @@ def load_model():
 def predict(features: dict) -> dict:
     model, feature_order = load_model()
 
-    # Create DataFrame with correct column names and order
     input_df = pd.DataFrame([features])[feature_order]
 
     prediction = model.predict(input_df)[0]
@@ -26,17 +25,17 @@ def predict(features: dict) -> dict:
 
     return {
         "predicted_class": int(prediction),
-        "blue_win_probability": f"{probabilities[1] * 100:.2f}%",
-        "red_win_probability": f"{probabilities[0] * 100:.2f}%"
+        "predicted_winner": "blue" if int(prediction) == 1 else "red",        
+        "blue_win_probability": float(probabilities[1]),
+        "red_win_probability": float(probabilities[0]),
     }
 
 
 if __name__ == "__main__":
-    # Example test input
     test_input = {
         "wr_diff": 0.15,
-        "blue_team_games": 15,
-        "red_team_games": 17
+        "blue_team_games": 10,
+        "red_team_games": 12,
     }
 
     result = predict(test_input)
