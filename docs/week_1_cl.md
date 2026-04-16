@@ -98,18 +98,24 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ---
 
-## Day 5 – Feature Planning
+## Day 5 Checklist
 
-- [ ] Define baseline features:
-  - [ ] blue_team
-  - [ ] red_team
-  - [ ] patch
-  - [ ] region
-  - [ ] (future) team win rates
-- [ ] Decide how to calculate:
-  - [ ] recent team win rate (rolling)
-- [ ] Document feature definitions in `docs/data-notes.md`
-- [ ] Plan how to avoid data leakage
+- [X] Load processed match-level dataset
+- [X] Sort matches by date
+- [X] Set rolling window size to 5
+- [X] Track each team’s recent results
+- [X] Compute pre-match rolling win rates
+- [X] Compute recent games counts
+- [X] Create:
+  - [X] blue_team_wr_5
+  - [X] red_team_wr_5
+  - [X] blue_team_games_5
+  - [X] red_team_games_5
+  - [X] wr_diff_5
+- [X] Save updated feature dataset
+- [X] Retrain Logistic Regression
+- [X] Compare new accuracy to Day 4 baseline
+- [X] Record results in notes
 
 ---
 
