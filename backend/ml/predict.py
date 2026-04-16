@@ -26,8 +26,8 @@ def predict(features: dict) -> dict:
 
     return {
         "predicted_class": int(prediction),
-        "blue_win_probability": float(probabilities[1]),
-        "red_win_probability": float(probabilities[0])
+        "blue_win_probability": f"{probabilities[1] * 100:.2f}%",
+        "red_win_probability": f"{probabilities[0] * 100:.2f}%"
     }
 
 
