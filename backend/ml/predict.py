@@ -35,8 +35,8 @@ if __name__ == "__main__":
     # Example test input
     test_input = {
         "wr_diff": 0.15,
-        "blue_team_games": 10,
-        "red_team_games": 12
+        "blue_team_games": 15,
+        "red_team_games": 17
     }
 
     result = predict(test_input)
