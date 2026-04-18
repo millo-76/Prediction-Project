@@ -145,39 +145,62 @@ Set up the data pipeline foundation: dataset selection, inspection, and preproce
 
 ### Prediction Pipeline
 
-- [ ] Create `predict.py`
-- [ ] Load saved model artifact
-- [ ] Define prediction function
-- [ ] Accept feature inputs
-- [ ] Return:
-  - [ ] predicted class
-  - [ ] probability
-- [ ] Test prediction locally
+- [X] Create `predict.py`
+- [X] Load saved model artifact
+- [X] Define prediction function
+- [X] Accept feature inputs
+- [X] Return:
+  - [X] predicted class
+  - [X] probability
+- [X] Test prediction locally
 
 ---
 
-## Day 7 – Review & Prep for Week 2
+## Day 7 – Production Polish & System Validation
 
-- [ ] Clean up folder structure if needed
-- [ ] Verify:
-  - [ ] raw dataset exists
-  - [ ] preprocessing script runs
-  - [ ] processed dataset is created
-- [ ] Update README with current progress
-- [ ] List known data issues
-- [ ] Write Week 2 goals:
-  - [ ] train baseline model
-  - [ ] evaluate model
-  - [ ] build first API endpoint
+## API Improvements
 
----
+- [X] Add `predicted_winner` to prediction response
+- [X] Update response schema to include new field
+- [X] Verify `/predict` returns clean, readable output
+- [X] Test multiple inputs via Swagger
 
-## End of Week 1 Definition of Done
+## System Validation
 
-- [ ] Dataset selected and stored
-- [ ] Data inspected and documented
-- [ ] Schema defined
-- [ ] Preprocessing script created
-- [ ] Processed dataset generated
-- [ ] Feature plan documented
-- [ ] Model approach defined
+- [X] Confirm full pipeline works end-to-end:
+  - [X] raw → processed → features → model → API
+- [X] Restart server and verify model loads correctly
+- [X] Test failure cases (bad input, missing fields)
+
+## Code Cleanup
+
+- [X] Remove duplicate or unused code
+- [X] Ensure clean separation:
+  - [X] routes/
+  - [X] ml/
+  - [X] models/
+- [X] Confirm consistent naming across files
+
+## Documentation
+
+- [X] Update README:
+  - [X] Project overview
+  - [X] Dataset description
+  - [X] Feature set
+  - [X] Model performance (~60.6%)
+  - [X] API usage example
+- [X] Add example request/response JSON
+
+## Notes & Reflection
+
+- [X] List known limitations:
+  - [X] No 2025 data yet
+  - [X] Rolling features not effective yet
+- [X] Write 3–5 key takeaways from Week 1
+
+## Week 2 Planning
+
+- [X] Define next phase:
+  - [X] Add 2025 dataset
+  - [X] Rebuild rolling features
+  - [X] Introduce evaluate.py
