@@ -34,3 +34,17 @@ To ensure data quality and simplify processing:
 - Only **complete matches** are used:
   ```python
   df = df[df["datacompleteness"] == "complete"]
+
+  ## Phase 2 Model (2025 + 2026)
+
+Accuracy: 62.63%
+
+Improvement:
++2% over 2026-only baseline
+
+Key Insight:
+Adding historical data significantly improved model performance by reducing early-season noise and stabilizing win rate estimates.
+
+Feature Importance:
+- wr_diff remains the dominant predictor
+- experience features decreased in importance

@@ -8,20 +8,20 @@ Expand the training dataset by integrating 2025 season data, rebuild the feature
 
 ## Day 8 – 2025 Data Integration Plan
 
-- [ ] Download 2025 Oracle's Elixir CSV
-- [ ] Download latest 2026 Oracle's Elixer CSV
-- [ ] Save to `data/raw/`
-- [ ] Compare latest 2026 file to current 2026 file
-- [ ] Inspect column compatibility with 2026 file
-- [ ] Filter both datasets to:
-  - [ ] `datacompleteness == "complete"`
-  - [ ] `position == "team"`
-- [ ] Select common core columns
-- [ ] Add or confirm `year` column on each dataset
-- [ ] Concatenate 2025 + 2026 data
-- [ ] Convert `date` to datetime
-- [ ] Sort full dataset by date
-- [ ] Rebuild match-level dataset
-- [ ] Recompute features on combined timeline
-- [ ] Retrain baseline Logistic Regression
-- [ ] Compare against 2026-only results
+- [X] Download 2025 Oracle's Elixir CSV
+- [X] Download latest 2026 Oracle's Elixer CSV
+- [X] Save to `data/raw/`
+- [X] Compare latest 2026 file to current 2026 file
+- [X] Inspect column compatibility with 2026 file
+- [X] Filter both datasets to:
+  - [X] `datacompleteness == "complete"`
+  - [X] `position == "team"`
+- [X] Select common core columns
+- [X] Add or confirm `year` column on each dataset
+- [X] Concatenate 2025 + 2026 data
+- [X] Convert `date` to datetime
+- [X] Sort full dataset by date
+- [X] Rebuild match-level dataset
+- [X] Recompute features on combined timeline
+- [X] Retrain baseline Logistic Regression
+- [X] Compare against 2026-only results

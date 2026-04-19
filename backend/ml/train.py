@@ -21,7 +21,7 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 
-DATA_PATH = Path("data/processed/final_feature_matches.csv")
+DATA_PATH = Path("data/processed/combined_feature_matches.csv")
 MODEL_PATH = Path("backend/ml/artifacts/logreg_baseline.joblib")
 
 
@@ -89,7 +89,7 @@ def train_model(df: pd.DataFrame) -> None:
 
 def main() -> None:
     # Run the end-to-end training workflow.
-    print("=== Phase 1 Baseline Model ===\n")
+    print("=== Phase 2 Combined Baseline Model ===\n")
     df = load_data(DATA_PATH)
     train_model(df)
 
