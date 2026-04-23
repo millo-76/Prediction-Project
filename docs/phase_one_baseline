@@ -1,0 +1,29 @@
+# Phase 1 Baseline Model
+
+## Model
+
+- Logistic Regression
+
+## Target
+
+- blue_side_win
+
+## Features
+
+- wr_diff
+- blue_team_games
+- red_team_games
+
+## Performance
+
+- Accuracy: 0.6064
+- Balanced precision/recall across classes
+
+## Key Insight
+
+- Relative team strength (wr_diff) is the dominant predictor
+- Simpler feature set outperformed more complex feature combinations
+
+## Artifact
+
+- backend/ml/artifacts/logreg_baseline.joblib

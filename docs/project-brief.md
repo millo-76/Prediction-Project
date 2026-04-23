@@ -60,3 +60,20 @@ The model predicts `blue_side_win`, a binary variable where:
 - 1 = Blue side wins
 - 0 = Red side wins
 
+## Planned Data Expansion
+
+After validating the current 2026-only pipeline, expand the dataset to include at least one previous full year of professional matches.
+
+### Purpose
+
+- improve feature stability
+- reduce early-season cold start issues
+- increase training volume
+- support stronger rolling and historical team performance features
+
+### Important constraints
+
+- preserve strict date ordering
+- compute all historical features sequentially
+- avoid leakage from future matches
+- account for patch/meta drift when evaluating results
