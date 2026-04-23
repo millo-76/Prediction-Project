@@ -5,7 +5,7 @@ from pathlib import Path
 import joblib
 import pandas as pd
 
-MODEL_PATH = Path("backend/ml/artifacts/logreg_baseline.joblib")
+MODEL_PATH = Path("backend/ml/artifacts/logreg_phase2_rolling.joblib")
 
 def load_model():
     if not MODEL_PATH.exists():
@@ -36,6 +36,7 @@ if __name__ == "__main__":
         "wr_diff": 0.15,
         "blue_team_games": 10,
         "red_team_games": 12,
+        "wr_diff_5": 0.05
     }
 
     result = predict(test_input)

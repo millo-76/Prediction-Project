@@ -9,7 +9,7 @@ report evaluation metrics, inspect coefficients, and save the trained model.
 Model setup:
 - Model: Logistic Regression
 - Target: blue_side_win
-- Features: wr_diff, blue_team_games, red_team_games
+- Features: wr_diff, blue_team_games, red_team_games, wr_diff_5
 - Split: 80/20 train/test with random_state=42
 - Metrics: accuracy, precision, recall, f1-score
 """
@@ -21,8 +21,8 @@ from sklearn.model_selection import train_test_split
 import joblib
 
 
-DATA_PATH = Path("data/processed/combined_feature_matches.csv")
-MODEL_PATH = Path("backend/ml/artifacts/logreg_baseline.joblib")
+DATA_PATH = Path("data/processed/phase2_best_features.csv")
+MODEL_PATH = Path("backend/ml/artifacts/logreg_phase2_rolling.joblib")
 
 
 # Baseline feature columns used for training.
@@ -30,6 +30,7 @@ FEATURES = [
     "wr_diff",
     "blue_team_games",
     "red_team_games",
+    "wr_diff_5"
 ]
 
 # Binary target column: 1 if blue side won, otherwise 0.

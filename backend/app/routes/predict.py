@@ -20,6 +20,6 @@ def make_prediction(request: PredictionRequest) -> PredictionResponse:
 def model_info():
     return {
         "model_type": "Logistic Regression",
-        "features": ["wr_diff", "blue_team_games", "red_team_games"],
+        "features": ["wr_diff", "blue_team_games", "red_team_games", "wr_diff_5"],
         "target": "blue_side_win",
     }
