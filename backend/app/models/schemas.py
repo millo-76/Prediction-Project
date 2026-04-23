@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Dict, Union
 
 
 class PredictionRequest(BaseModel):
@@ -13,3 +14,14 @@ class PredictionResponse(BaseModel):
     predicted_winner: str
     blue_win_probability: float
     red_win_probability: float
+
+
+class TeamPredictionRequest(BaseModel):
+    blue_team: str
+    red_team: str
+
+
+class TeamPredictionResponse(PredictionResponse):
+    blue_team: str
+    red_team: str
+    features_used: Dict[str, Union[float, int]]
