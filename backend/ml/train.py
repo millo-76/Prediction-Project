@@ -1,10 +1,9 @@
-# 04/16/2026 Version 1.0.0
-
-"""Train and evaluate the baseline logistic regression model.
+"""Train and evaluate the current best logistic regression model.
 
 Goal:
-Build a simple baseline classifier from engineered pre-match features,
-report evaluation metrics, inspect coefficients, and save the trained model.
+Train a logistic regression classifier on the best-performing Phase 2
+feature set, report evaluation metrics, inspect coefficients, and save
+the trained model artifact.
 
 Model setup:
 - Model: Logistic Regression
@@ -13,6 +12,7 @@ Model setup:
 - Split: 80/20 train/test with random_state=42
 - Metrics: accuracy, precision, recall, f1-score
 """
+
 from pathlib import Path
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
@@ -83,14 +83,17 @@ def train_model(df: pd.DataFrame) -> None:
     MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump({
         "model": model,
-        "features": FEATURES
+        "features": FEATURES,
+        "target": TARGET,
+        "data_path": str(DATA_PATH),
+        "model_name": "logreg_phase2_rolling"
     }, MODEL_PATH)
     print(f"Saved model to: {MODEL_PATH}")
 
 
 def main() -> None:
     # Run the end-to-end training workflow.
-    print("=== Phase 2 Combined Baseline Model ===\n")
+    print("=== Phase 2 Best Logistic Regression Model ===\n")
     df = load_data(DATA_PATH)
     train_model(df)
 
