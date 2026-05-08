@@ -86,3 +86,13 @@ def predict_from_teams(blue_team: str, red_team: str) -> dict:
         **prediction,
         "features_used": features,
     }
+
+def get_available_teams() -> list[str]:
+    df = pd.read_csv("data/processed/phase2_best_features.csv")
+
+    teams = sorted(
+        set(df["blue_team"].dropna().unique())
+        | set(df["red_team"].dropna().unique())
+    )
+
+    return teams
