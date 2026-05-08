@@ -41,3 +41,10 @@ def model_info():
         "features": ["wr_diff", "blue_team_games", "red_team_games", "wr_diff_5"],
         "target": "blue_side_win",
     }
+
+@router.get("/teams")
+def get_teams():
+    teams = inference_service.get_available_teams()
+    return {"teams": teams}
+
+inference_service = __import__("backend.app.services.inference", fromlist=["get_available_teams"])

@@ -20,9 +20,11 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 import joblib
 
+from evaluate import DATE_COLUMN, TEST_SIZE
+
 
 DATA_PATH = Path("data/processed/phase2_best_features.csv")
-MODEL_PATH = Path("backend/ml/artifacts/logreg_phase2_rolling.joblib")
+MODEL_PATH = Path("backend/ml/artifacts/logreg_phase3_rolling.joblib")
 
 
 # Baseline feature columns used for training.
@@ -44,25 +46,29 @@ def load_data(path: Path) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
+
 def train_model(df: pd.DataFrame) -> None:
-    # Train the baseline model, print diagnostics, and persist the artifact.
-    # 1) Build feature matrix and target vector.
-    X = df[FEATURES]
-    y = df[TARGET]
+    # Train the model, print diagnostics, and persist the artifact.
+    df = df.copy()
 
-    # 2) Create a reproducible train/test split.
-    X_train, X_test, y_train, y_test = train_test_split(
-        X,
-        y,
-        test_size=0.2,
-        random_state=42
-    )
+    df[DATE_COLUMN] = pd.to_datetime(df[DATE_COLUMN], errors="coerce")
+    df = df.dropna(subset=[DATE_COLUMN])
+    df = df.sort_values(DATE_COLUMN).reset_index(drop=True)
 
-    # 3) Fit logistic regression on the training set.
+    split_index = int(len(df) * (1 - TEST_SIZE))
+
+    train_df = df.iloc[:split_index]
+    test_df = df.iloc[split_index:]
+
+    X_train = train_df[FEATURES]
+    y_train = train_df[TARGET]
+
+    X_test = test_df[FEATURES]
+    y_test = test_df[TARGET]
+
     model = LogisticRegression(max_iter=1000)
     model.fit(X_train, y_train)
 
-    # 4) Evaluate predictions on the held-out test set.
     y_pred = model.predict(X_test)
 
     accuracy = accuracy_score(y_test, y_pred)
@@ -70,7 +76,6 @@ def train_model(df: pd.DataFrame) -> None:
     print("Classification Report:")
     print(classification_report(y_test, y_pred))
 
-    # 5) Print learned coefficients for quick interpretability checks.
     coefficients = pd.DataFrame({
         "feature": FEATURES,
         "coefficient": model.coef_[0]
@@ -79,17 +84,17 @@ def train_model(df: pd.DataFrame) -> None:
     print("Coefficients:")
     print(coefficients)
 
-    # 6) Ensure artifact directory exists, then save the trained model.
     MODEL_PATH.parent.mkdir(parents=True, exist_ok=True)
     joblib.dump({
         "model": model,
         "features": FEATURES,
         "target": TARGET,
         "data_path": str(DATA_PATH),
-        "model_name": "logreg_phase2_rolling"
+        "model_name": "logreg_phase3_rolling",
+        "split_strategy": "chronological",
+        "test_size": TEST_SIZE,
     }, MODEL_PATH)
     print(f"Saved model to: {MODEL_PATH}")
-
 
 def main() -> None:
     # Run the end-to-end training workflow.
