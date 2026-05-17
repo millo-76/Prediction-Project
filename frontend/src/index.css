@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Rajdhani, Inter, system-ui, sans-serif;
+  background: #000000;
+  color: #ffffff;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #000000;
+}
+
+.red-cyber-panel {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 24px) 0,
+    100% 24px,
+    100% 100%,
+    24px 100%,
+    0 calc(100% - 24px)
+    );
+}
+
+.blue-cyber-panel {
+  clip-path: polygon(
+    24px 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%,
+    0 24px
+    );
+}
+
+.cyber-panel {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 100%
+    );
+}
