@@ -1,0 +1,2 @@
+experiment_id,date,dataset,model,features,split_type,train_start,train_end,test_start,test_end,train_rows,test_rows,accuracy,precision_0,recall_0,f1_0,precision_1,recall_1,f1_1,artifact_path,notes
+phase3_logreg_rolling,2026-05-16,data\processed\phase3_rolling_features.csv,LogisticRegression,wr_diff|blue_team_games|red_team_games|wr_diff_5,chronological,2025-01-11,2026-03-03,2026-03-03,2026-05-16,10817,2705,0.6529,0.6516,0.5476,0.5951,0.6537,0.7446,0.6962,backend\ml\artifacts\logreg_phase3_rolling.joblib,Phase 3 refreshed data baseline
