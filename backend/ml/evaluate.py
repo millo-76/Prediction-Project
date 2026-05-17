@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
 
-DATA_PATH = Path("data/processed/phase2_best_features.csv")
+DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
 MODEL_PATH = Path("backend/ml/artifacts/logreg_phase3_rolling.joblib")
 
 TARGET = "blue_side_win"

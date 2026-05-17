@@ -23,7 +23,7 @@ import joblib
 from evaluate import DATE_COLUMN, TEST_SIZE
 
 
-DATA_PATH = Path("data/processed/phase2_best_features.csv")
+DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
 MODEL_PATH = Path("backend/ml/artifacts/logreg_phase3_rolling.joblib")
 
 
@@ -98,7 +98,7 @@ def train_model(df: pd.DataFrame) -> None:
 
 def main() -> None:
     # Run the end-to-end training workflow.
-    print("=== Phase 2 Best Logistic Regression Model ===\n")
+    print("=== Phase 3 Rolling Features Logistic Regression Model ===\n")
     df = load_data(DATA_PATH)
     train_model(df)
 

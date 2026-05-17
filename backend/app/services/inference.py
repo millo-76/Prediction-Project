@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from backend.ml.predict import predict
 
 
-DATA_PATH = Path("data/processed/phase2_best_features.csv")
+DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
 
 _df_cache = None
 
@@ -88,7 +88,7 @@ def predict_from_teams(blue_team: str, red_team: str) -> dict:
     }
 
 def get_available_teams() -> list[str]:
-    df = pd.read_csv("data/processed/phase2_best_features.csv")
+    df = pd.read_csv("data/processed/phase3_rolling_features.csv")
 
     teams = sorted(
         set(df["blue_team"].dropna().unique())
