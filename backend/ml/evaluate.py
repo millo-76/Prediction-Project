@@ -1,7 +1,9 @@
-from pathlib import Path
-
+import csv
 import joblib
 import pandas as pd
+
+from pathlib import Path
+from datetime import date
 from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
@@ -40,13 +42,16 @@ def validate_columns(df: pd.DataFrame, features: list[str]) -> None:
         raise KeyError(f"Missing required columns in dataset: {missing}")
 
 
-def evaluate_predictions(y_test, y_pred, title: str) -> None:
+def evaluate_predictions(y_test, y_pred, title: str) -> tuple[float, dict]:
     accuracy = accuracy_score(y_test, y_pred)
+    report = classification_report(y_test, y_pred, output_dict=True)
 
     print(f"=== {title} ===")
     print(f"Accuracy: {accuracy:.4f}")
     print("Classification Report:")
     print(classification_report(y_test, y_pred))
+
+    return accuracy, report
 
 
 def evaluate_random_split(df: pd.DataFrame, model, features: list[str]) -> None:
@@ -96,12 +101,75 @@ def evaluate_chronological_split(df: pd.DataFrame, model, features: list[str]) -
     print(f"Test rows: {len(test_df)}")
     print()
 
-    evaluate_predictions(
+    accuracy, report = evaluate_predictions(
         y_test=y_test,
         y_pred=y_pred,
         title="Chronological Split Evaluation",
     )
 
+    log_experiment_result(
+        experiment_id="phase3_logreg_rolling",
+        dataset_path=DATA_PATH,
+        model_path=MODEL_PATH,
+        model_name="LogisticRegression",
+        features=features,
+        train_df=train_df,
+        test_df=test_df,
+        accuracy=accuracy,
+        report=report,
+        notes="Phase 3 refreshed data baseline",
+    )
+
+def log_experiment_result(
+    experiment_id: str,
+    dataset_path: Path,
+    model_path: Path,
+    model_name: str,
+    features: list[str],
+    train_df: pd.DataFrame,
+    test_df: pd.DataFrame,
+    accuracy: float,
+    report: dict,
+    notes: str,
+) -> None:
+    results_path = Path("experiments/results.csv")
+    results_path.parent.mkdir(parents=True, exist_ok=True)
+
+    row = {
+        "experiment_id": experiment_id,
+        "date": str(date.today()),
+        "dataset": str(dataset_path),
+        "model": model_name,
+        "features": "|".join(features),
+        "split_type": "chronological",
+        "train_start": str(train_df[DATE_COLUMN].min().date()),
+        "train_end": str(train_df[DATE_COLUMN].max().date()),
+        "test_start": str(test_df[DATE_COLUMN].min().date()),
+        "test_end": str(test_df[DATE_COLUMN].max().date()),
+        "train_rows": len(train_df),
+        "test_rows": len(test_df),
+        "accuracy": round(accuracy, 4),
+        "precision_0": round(report["0"]["precision"], 4),
+        "recall_0": round(report["0"]["recall"], 4),
+        "f1_0": round(report["0"]["f1-score"], 4),
+        "precision_1": round(report["1"]["precision"], 4),
+        "recall_1": round(report["1"]["recall"], 4),
+        "f1_1": round(report["1"]["f1-score"], 4),
+        "artifact_path": str(model_path),
+        "notes": notes,
+    }
+
+    write_header = not results_path.exists()
+
+    with results_path.open("a", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=row.keys())
+
+        if write_header:
+            writer.writeheader()
+
+        writer.writerow(row)
+
+    print(f"\nSaved experiment result to: {results_path}")
 
 def main() -> None:
     df = load_dataset(DATA_PATH)
@@ -121,7 +189,6 @@ def main() -> None:
     evaluate_random_split(df, model, features)
     print()
     evaluate_chronological_split(df, model, features)
-
 
 if __name__ == "__main__":
     main()
