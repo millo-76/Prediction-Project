@@ -37,8 +37,8 @@ def make_team_prediction(request: TeamPredictionRequest) -> TeamPredictionRespon
 def model_info():
     return {
         "model_type": "Logistic Regression",
-        "artifact": "logreg_phase2_rolling.joblib",
-        "features": ["wr_diff", "blue_team_games", "red_team_games", "wr_diff_5"],
+        "artifact": "logreg_phase4_elo.joblib",
+        "features": ["wr_diff", "blue_team_games", "red_team_games", "wr_diff_5", "elo_diff"],
         "target": "blue_side_win",
     }
 
