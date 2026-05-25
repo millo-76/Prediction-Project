@@ -8,8 +8,8 @@ from sklearn.metrics import accuracy_score, classification_report
 from sklearn.model_selection import train_test_split
 
 
-DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
-MODEL_PATH = Path("backend/ml/artifacts/logreg_phase3_rolling.joblib")
+DATA_PATH = Path("data/processed/phase4_elo_features.csv")
+MODEL_PATH = Path("backend/ml/artifacts/logreg_phase4_elo.joblib")
 
 TARGET = "blue_side_win"
 DATE_COLUMN = "date"
@@ -108,7 +108,7 @@ def evaluate_chronological_split(df: pd.DataFrame, model, features: list[str]) -
     )
 
     log_experiment_result(
-        experiment_id="phase3_logreg_rolling",
+        experiment_id="phase4_logreg_elo",
         dataset_path=DATA_PATH,
         model_path=MODEL_PATH,
         model_name="LogisticRegression",
@@ -117,7 +117,7 @@ def evaluate_chronological_split(df: pd.DataFrame, model, features: list[str]) -
         test_df=test_df,
         accuracy=accuracy,
         report=report,
-        notes="Phase 3 refreshed data baseline",
+        notes="Phase 4 Elo features baseline",
     )
 
 def log_experiment_result(

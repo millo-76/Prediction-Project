@@ -6,7 +6,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from backend.ml.predict import predict
 
 
-DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
+DATA_PATH = Path("data/processed/phase4_elo_features.csv")
 
 _df_cache = None
 
@@ -40,25 +40,27 @@ def get_team_stats(df: pd.DataFrame, team_name: str) -> dict:
 
     all_time_wr = total_wins / total_games if total_games > 0 else 0.5
 
-    # Rolling 5 results in chronological order
+    # Rolling 5 results and latest team ELO in chronological order
     team_matches = []
 
     for _, row in blue_df.iterrows():
-        team_matches.append((row["date"], int(row["blue_side_win"])))
+        team_matches.append((row["date"], int(row["blue_side_win"]), float(row["blue_elo"])))
 
     for _, row in red_df.iterrows():
-        team_matches.append((row["date"], int(1 - row["blue_side_win"])))
+        team_matches.append((row["date"], int(1 - row["blue_side_win"]), float(row["red_elo"])))
 
     team_matches.sort(key=lambda x: x[0])
 
-    recent_results = [result for _, result in team_matches[-5:]]
+    recent_results = [result for _, result, _ in team_matches[-5:]]
     recent_games = len(recent_results)
     rolling_wr_5 = sum(recent_results) / recent_games if recent_games > 0 else 0.5
+    latest_elo = team_matches[-1][2] if team_matches else 1500.0
 
     return {
         "games": int(total_games),
         "win_rate": float(all_time_wr),
         "rolling_win_rate_5": float(rolling_wr_5),
+        "elo": float(latest_elo),
     }
 
 
@@ -73,6 +75,7 @@ def build_features_for_matchup(blue_team: str, red_team: str) -> dict:
         "blue_team_games": blue_stats["games"],
         "red_team_games": red_stats["games"],
         "wr_diff_5": blue_stats["rolling_win_rate_5"] - red_stats["rolling_win_rate_5"],
+        "elo_diff": blue_stats["elo"] - red_stats["elo"],
     }
 
 
@@ -88,7 +91,7 @@ def predict_from_teams(blue_team: str, red_team: str) -> dict:
     }
 
 def get_available_teams() -> list[str]:
-    df = pd.read_csv("data/processed/phase3_rolling_features.csv")
+    df = load_feature_data()
 
     teams = sorted(
         set(df["blue_team"].dropna().unique())

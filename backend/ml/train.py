@@ -8,7 +8,7 @@ the trained model artifact.
 Model setup:
 - Model: Logistic Regression
 - Target: blue_side_win
-- Features: wr_diff, blue_team_games, red_team_games, wr_diff_5
+- Features: wr_diff, blue_team_games, red_team_games, wr_diff_5, elo_diff
 - Split: 80/20 train/test with random_state=42
 - Metrics: accuracy, precision, recall, f1-score
 """
@@ -23,8 +23,8 @@ import joblib
 from evaluate import DATE_COLUMN, TEST_SIZE
 
 
-DATA_PATH = Path("data/processed/phase3_rolling_features.csv")
-MODEL_PATH = Path("backend/ml/artifacts/logreg_phase3_rolling.joblib")
+DATA_PATH = Path("data/processed/phase4_elo_features.csv")
+MODEL_PATH = Path("backend/ml/artifacts/logreg_phase4_elo.joblib")
 
 
 # Baseline feature columns used for training.
@@ -32,7 +32,8 @@ FEATURES = [
     "wr_diff",
     "blue_team_games",
     "red_team_games",
-    "wr_diff_5"
+    "wr_diff_5",
+    "elo_diff",
 ]
 
 # Binary target column: 1 if blue side won, otherwise 0.
@@ -90,7 +91,7 @@ def train_model(df: pd.DataFrame) -> None:
         "features": FEATURES,
         "target": TARGET,
         "data_path": str(DATA_PATH),
-        "model_name": "logreg_phase3_rolling",
+        "model_name": "logreg_phase4_elo",
         "split_strategy": "chronological",
         "test_size": TEST_SIZE,
     }, MODEL_PATH)
@@ -98,7 +99,7 @@ def train_model(df: pd.DataFrame) -> None:
 
 def main() -> None:
     # Run the end-to-end training workflow.
-    print("=== Phase 3 Rolling Features Logistic Regression Model ===\n")
+    print("=== Phase 4 Elo Features Logistic Regression Model ===\n")
     df = load_data(DATA_PATH)
     train_model(df)
 

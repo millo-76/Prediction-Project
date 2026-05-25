@@ -7,6 +7,7 @@ class PredictionRequest(BaseModel):
     blue_team_games: int
     red_team_games: int
     wr_diff_5: float
+    elo_diff: float
 
 
 class PredictionResponse(BaseModel):
