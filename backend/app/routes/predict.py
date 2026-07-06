@@ -7,6 +7,7 @@ from backend.app.models.schemas import (
     TeamPredictionResponse,
 )
 from backend.app.services.inference import predict_from_teams
+from backend.ml.prediction_logger import log_prediction
 from backend.ml.predict import predict
 
 
@@ -26,6 +27,15 @@ def make_prediction(request: PredictionRequest) -> PredictionResponse:
 def make_team_prediction(request: TeamPredictionRequest) -> TeamPredictionResponse:
     try:
         result = predict_from_teams(request.blue_team, request.red_team)
+        log_prediction(
+            blue_team=request.blue_team,
+            red_team=request.red_team,
+            predicted_winner=result["predicted_winner"],
+            blue_win_probability=result["blue_win_probability"],
+            red_win_probability=result["red_win_probability"],
+            model_name="Logistic Regression",
+            model_artifact="logreg_phase4_elo.joblib",
+        )
         return TeamPredictionResponse(**result)
     except ValueError as e:
         raise HTTPException(status_code=404, detail=str(e))

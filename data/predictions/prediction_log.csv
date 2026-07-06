@@ -1,0 +1,86 @@
+prediction_id,timestamp_utc,blue_team,red_team,predicted_winner,blue_win_probability,red_win_probability,model_name,model_artifact,league,tournament,actual_winner,correct
+PRED-00001,2026-07-06 03:47:37.537285+00:00,G2 Esports,Movistar KOI,blue,0.7282,0.2718,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00002,2026-07-06 03:47:37.549286+00:00,Team Vitality,Karmine Corp,red,0.3789,0.6211,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00003,2026-07-06 03:47:37.560675+00:00,Team Vitality,G2 Esports,red,0.2489,0.7511,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00004,2026-07-06 03:47:37.572814+00:00,Karmine Corp,Movistar KOI,blue,0.5928,0.4072,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00005,2026-07-06 03:47:37.583391+00:00,Movistar KOI,Team Vitality,blue,0.6541,0.3459,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00006,2026-07-06 03:47:37.595827+00:00,G2 Esports,Karmine Corp,blue,0.6872,0.3128,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00007,2026-07-06 03:47:37.608367+00:00,Kiwoom DRX,Nongshim RedForce,blue,0.5685,0.4315,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00008,2026-07-06 03:47:37.622384+00:00,T1,KT Rolster,blue,0.8208,0.1792,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00009,2026-07-06 03:47:37.634928+00:00,DN SOOPers,BNK FEARX,red,0.2951,0.7049,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00010,2026-07-06 03:47:37.649379+00:00,Hanwha Life Esports,Dplus Kia,blue,0.7466,0.2534,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00011,2026-07-06 03:47:37.663933+00:00,Gen.G,T1,red,0.4464,0.5536,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00012,2026-07-06 03:47:37.676628+00:00,HANJIN BRION,Kiwoom DRX,red,0.4548,0.5452,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00013,2026-07-06 03:47:37.686188+00:00,Team Vitality,Team Heretics,blue,0.7225,0.2775,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00014,2026-07-06 03:47:37.697005+00:00,Movistar KOI,Shifters,blue,0.7317,0.2683,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00015,2026-07-06 03:47:37.710401+00:00,Nongshim RedForce,BNK FEARX,red,0.4691,0.5309,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00016,2026-07-06 03:47:37.724709+00:00,Gen.G,Dplus Kia,blue,0.7015,0.2985,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00017,2026-07-06 03:47:37.734264+00:00,GIANTX,SK Gaming,blue,0.726,0.274,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00018,2026-07-06 03:47:37.744892+00:00,Karmine Corp,Natus Vincere,blue,0.6691,0.3309,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00019,2026-07-06 03:47:37.756783+00:00,DN SOOPers,HANJIN BRION,red,0.4221,0.5779,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00020,2026-07-06 03:47:37.770222+00:00,KT Rolster,Hanwha Life Esports,red,0.2709,0.7291,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00021,2026-07-06 03:47:37.780760+00:00,SK Gaming,G2 Esports,red,0.1615,0.8385,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00022,2026-07-06 03:47:37.792014+00:00,Fnatic,Movistar KOI,blue,0.5085,0.4915,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00023,2026-07-06 03:47:37.800033+00:00,Natus Vincere,Shifters,blue,0.66,0.34,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00024,2026-07-06 03:47:37.810817+00:00,Karmine Corp,Team Heretics,blue,0.8358,0.1642,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,,
+PRED-00025,2026-07-06 03:47:37.823502+00:00,HANJIN BRION,Nongshim RedForce,red,0.4799,0.5201,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00026,2026-07-06 03:47:37.837818+00:00,Hanwha Life Esports,Gen.G,blue,0.6006,0.3994,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00027,2026-07-06 03:47:37.850114+00:00,Kiwoom DRX,DN SOOPers,blue,0.7347,0.2653,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,False
+PRED-00028,2026-07-06 03:47:37.864777+00:00,Dplus Kia,T1,red,0.2917,0.7083,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00029,2026-07-06 03:47:37.878104+00:00,KT Rolster,Gen.G,red,0.3179,0.6821,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00030,2026-07-06 03:47:37.890580+00:00,BNK FEARX,HANJIN BRION,blue,0.6759,0.3241,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00031,2026-07-06 03:47:37.899322+00:00,Shifters,GIANTX,red,0.3842,0.6158,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00032,2026-07-06 03:47:37.909494+00:00,Team Heretics,Fnatic,red,0.2788,0.7212,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00033,2026-07-06 03:47:37.924411+00:00,T1,Hanwha Life Esports,blue,0.5876,0.4124,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,False
+PRED-00034,2026-07-06 03:47:37.937272+00:00,Nongshim RedForce,DN SOOPers,blue,0.7153,0.2847,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,False
+PRED-00035,2026-07-06 03:47:37.945737+00:00,SK Gaming,Natus Vincere,red,0.3754,0.6246,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00036,2026-07-06 03:47:37.956682+00:00,Movistar KOI,GIANTX,blue,0.5916,0.4084,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00037,2026-07-06 03:47:37.970470+00:00,Dplus Kia,KT Rolster,blue,0.6108,0.3892,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00038,2026-07-06 03:47:37.983321+00:00,BNK FEARX,Kiwoom DRX,blue,0.5938,0.4062,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00039,2026-07-06 03:47:37.994119+00:00,Team Heretics,G2 Esports,red,0.1306,0.8694,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00040,2026-07-06 03:47:38.005428+00:00,Fnatic,Karmine Corp,red,0.4589,0.5411,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00041,2026-07-06 03:47:38.014539+00:00,SK Gaming,Team Vitality,red,0.4073,0.5927,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00042,2026-07-06 03:47:38.024937+00:00,Natus Vincere,G2 Esports,red,0.2739,0.7261,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00043,2026-07-06 03:47:38.037835+00:00,DN SOOPers,Nongshim RedForce,red,0.3615,0.6385,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00044,2026-07-06 03:47:38.051225+00:00,KT Rolster,Dplus Kia,red,0.4773,0.5227,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00045,2026-07-06 03:47:38.063656+00:00,Kiwoom DRX,BNK FEARX,red,0.4934,0.5066,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00046,2026-07-06 03:47:38.077782+00:00,Gen.G,Hanwha Life Esports,red,0.4887,0.5113,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00047,2026-07-06 03:47:38.092394+00:00,T1,Dplus Kia,blue,0.778,0.222,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00048,2026-07-06 03:47:38.104735+00:00,Nongshim RedForce,HANJIN BRION,blue,0.6066,0.3934,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00049,2026-07-06 03:47:38.112750+00:00,Shifters,SK Gaming,blue,0.5828,0.4172,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00050,2026-07-06 03:47:38.122954+00:00,GIANTX,Team Vitality,blue,0.607,0.393,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00051,2026-07-06 03:47:38.136950+00:00,Hanwha Life Esports,KT Rolster,blue,0.7939,0.2061,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00052,2026-07-06 03:47:38.149907+00:00,BNK FEARX,DN SOOPers,blue,0.7727,0.2273,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00053,2026-07-06 03:47:38.159941+00:00,SK Gaming,Fnatic,red,0.3313,0.6687,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00054,2026-07-06 03:47:38.170315+00:00,G2 Esports,Shifters,blue,0.8599,0.1401,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00055,2026-07-06 03:47:38.185341+00:00,T1,Gen.G,blue,0.6413,0.3587,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00056,2026-07-06 03:47:38.197625+00:00,Kiwoom DRX,HANJIN BRION,blue,0.6296,0.3704,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00057,2026-07-06 03:47:38.208074+00:00,Movistar KOI,Natus Vincere,blue,0.6232,0.3768,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00058,2026-07-06 03:47:38.219816+00:00,G2 Esports,Fnatic,blue,0.7543,0.2457,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00059,2026-07-06 03:47:38.228748+00:00,Natus Vincere,Team Heretics,blue,0.7477,0.2523,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00060,2026-07-06 03:47:38.240174+00:00,GIANTX,Karmine Corp,red,0.4435,0.5565,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00061,2026-07-06 03:47:38.253866+00:00,Gen.G,KT Rolster,blue,0.7544,0.2456,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00062,2026-07-06 03:47:38.266033+00:00,HANJIN BRION,DN SOOPers,blue,0.6598,0.3402,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00063,2026-07-06 03:47:38.280975+00:00,Dplus Kia,Hanwha Life Esports,red,0.3281,0.6719,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00064,2026-07-06 03:47:38.293878+00:00,Nongshim RedForce,Kiwoom DRX,blue,0.5194,0.4806,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,False
+PRED-00065,2026-07-06 03:47:38.306389+00:00,HANJIN BRION,BNK FEARX,red,0.4055,0.5945,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00066,2026-07-06 03:47:38.320202+00:00,KT Rolster,T1,red,0.2386,0.7614,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,False
+PRED-00067,2026-07-06 03:47:38.329504+00:00,Team Heretics,SK Gaming,red,0.4791,0.5209,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00068,2026-07-06 03:47:38.338971+00:00,Team Vitality,Natus Vincere,blue,0.5084,0.4916,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00069,2026-07-06 03:47:38.353486+00:00,Dplus Kia,Gen.G,red,0.3799,0.6201,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00070,2026-07-06 03:47:38.365528+00:00,DN SOOPers,Kiwoom DRX,red,0.3386,0.6614,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,True
+PRED-00071,2026-07-06 03:47:38.374859+00:00,Fnatic,Shifters,blue,0.7033,0.2967,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,False
+PRED-00072,2026-07-06 03:47:38.385135+00:00,SK Gaming,Movistar KOI,red,0.302,0.698,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00073,2026-07-06 03:47:38.400211+00:00,Hanwha Life Esports,T1,blue,0.5028,0.4972,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,red,False
+PRED-00074,2026-07-06 03:47:38.413241+00:00,BNK FEARX,Nongshim RedForce,blue,0.6179,0.3821,Logistic Regression,logreg_phase4_elo.joblib,LCK,LCK/2026 Season/Rounds 3-4,blue,True
+PRED-00075,2026-07-06 03:47:38.422884+00:00,Team Heretics,GIANTX,red,0.2911,0.7089,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00076,2026-07-06 03:47:38.432933+00:00,Shifters,Karmine Corp,red,0.2959,0.7041,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,False
+PRED-00077,2026-07-06 03:47:38.442316+00:00,Natus Vincere,Fnatic,red,0.4925,0.5075,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00078,2026-07-06 03:47:38.453527+00:00,GIANTX,G2 Esports,red,0.3021,0.6979,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00079,2026-07-06 03:47:38.462059+00:00,Shifters,Team Heretics,blue,0.642,0.358,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,,
+PRED-00080,2026-07-06 03:47:38.472078+00:00,Team Vitality,Fnatic,red,0.4602,0.5398,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,red,True
+PRED-00081,2026-07-06 03:47:38.482854+00:00,Karmine Corp,SK Gaming,blue,0.7986,0.2014,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,,
+PRED-00082,2026-07-06 03:47:38.491961+00:00,Natus Vincere,GIANTX,blue,0.5076,0.4924,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00083,2026-07-06 03:47:38.500623+00:00,Shifters,Team Vitality,red,0.4488,0.5512,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,,
+PRED-00084,2026-07-06 03:47:38.511545+00:00,Movistar KOI,Team Heretics,blue,0.8064,0.1936,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True
+PRED-00085,2026-07-06 03:47:38.522020+00:00,Fnatic,GIANTX,blue,0.5573,0.4427,Logistic Regression,logreg_phase4_elo.joblib,LEC,LEC/2026 Season/Summer Season,blue,True

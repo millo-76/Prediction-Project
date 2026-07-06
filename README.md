@@ -1,92 +1,88 @@
 # League of Legends Match Predictor
 
-Full-stack machine learning application that predicts the winner of a professional League of Legends match from historical team performance data (Oracle's Elixir).
+End-to-end project for predicting professional League of Legends match winners.
+It includes a FastAPI backend, a React frontend, and reproducible ML scripts.
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110-009688?logo=fastapi)](https://fastapi.tiangolo.com/)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4-F7931E?logo=scikit-learn)](https://scikit-learn.org/)
 [![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)](https://react.dev/)
 
----
+## What This Project Does
 
-## Overview
+Given a matchup, the system predicts:
 
-Given two teams, the system returns:
-
-- Predicted winner (blue or red)
+- Winner (blue side or red side)
 - Blue-side win probability
 - Red-side win probability
 
-The project currently includes:
+Two prediction modes are supported:
 
-- A FastAPI backend for inference
-- A React + TypeScript frontend for team-vs-team predictions
-- Reproducible ML scripts for train/evaluate/predict
-- A phase-based feature pipeline up to Phase 4 (ELO-enhanced)
+- Feature-based: provide engineered numeric features directly
+- Team-based: provide team names, and backend computes matchup features
 
----
-
-## Current Status (Phase 4 Baseline)
-
-| Component | Status |
-|---|---|
-| Data pipeline (2025 + 2026) | ✅ Complete |
-| Baseline model (Phase 1) | ✅ Complete |
-| Rolling-form model (Phase 3) | ✅ Complete |
-| ELO-enhanced model (Phase 4) | ✅ Complete |
-| Prediction API | ✅ Complete |
-| Team lookup endpoint | ✅ Complete |
-| Frontend UI (React) | ✅ Complete |
-
-Latest logged result (chronological split):
+## Current Baseline
 
 - Model: Logistic Regression
-- Dataset: `data/processed/phase4_elo_features.csv`
-- Features: `wr_diff`, `blue_team_games`, `red_team_games`, `wr_diff_5`, `elo_diff`
-- Accuracy: **0.6737**
+- Target: `blue_side_win`
+- Current feature set: `wr_diff`, `blue_team_games`, `red_team_games`, `wr_diff_5`, `elo_diff`
+- Main artifact: `backend/ml/artifacts/logreg_phase4_elo.joblib`
+- Latest logged chronological accuracy: **0.6737**
 
-Source: `experiments/results.csv` (row `phase4_logreg_elo`, 2026-05-24).
+Source: `experiments/results.csv` (latest `phase4_logreg_elo` row).
 
----
+## Quickstart
 
-## Model
+Run from repository root unless otherwise noted.
 
-### Target
+### 1) Python Environment
 
-`blue_side_win` (binary):
+```bash
+python -m venv venv
+source venv/bin/activate
+python -m pip install --upgrade pip
+```
 
-- `1` = blue side wins
-- `0` = red side wins
+### 2) Install Backend Dependencies
 
-### Features (Phase 4)
+```bash
+pip install -r backend/requirements.txt
+```
 
-| Feature | Description |
-|---|---|
-| `wr_diff` | Blue all-time win rate minus red all-time win rate |
-| `blue_team_games` | Total games played by blue team |
-| `red_team_games` | Total games played by red team |
-| `wr_diff_5` | Blue rolling-5 win rate minus red rolling-5 win rate |
-| `elo_diff` | Blue latest ELO minus red latest ELO |
+If `backend/requirements.txt` is empty in your clone, install the core stack manually:
 
-### Training Setup
+```bash
+pip install fastapi uvicorn pandas scikit-learn joblib pydantic
+```
 
-- Algorithm: Logistic Regression (`max_iter=1000`)
-- Split: 80/20 chronological (no shuffle)
-- Metrics: accuracy + classification report
-- Primary artifact: `backend/ml/artifacts/logreg_phase4_elo.joblib`
+### 3) Start API
 
----
+```bash
+uvicorn backend.app.main:app --reload
+```
 
-## API
+API docs:
 
-When backend is running:
+- Swagger UI: http://127.0.0.1:8000/docs
+- OpenAPI JSON: http://127.0.0.1:8000/openapi.json
 
-- Swagger docs: `http://127.0.0.1:8000/docs`
-- OpenAPI JSON: `http://127.0.0.1:8000/openapi.json`
+### 4) Start Frontend
+
+In a second terminal:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Frontend runs on http://localhost:5173 and calls backend on http://127.0.0.1:8000.
+
+## API Reference
 
 ### `GET /`
 
-Health message:
+Returns service banner:
 
 ```json
 { "message": "LoL Match Predictor API is running" }
@@ -94,7 +90,7 @@ Health message:
 
 ### `GET /health`
 
-Simple status check:
+Returns API health:
 
 ```json
 { "status": "ok" }
@@ -102,7 +98,11 @@ Simple status check:
 
 ### `GET /teams`
 
-Returns available team names inferred from the Phase 4 feature dataset.
+Returns the available team list inferred from `data/processed/phase4_elo_features.csv`.
+
+### `GET /model-info`
+
+Returns active model metadata and feature list.
 
 ### `POST /predict`
 
@@ -120,7 +120,7 @@ Request:
 }
 ```
 
-Response:
+Response shape:
 
 ```json
 {
@@ -133,7 +133,7 @@ Response:
 
 ### `POST /predict-from-teams`
 
-Predict from team names; backend computes features automatically.
+Predict from team names (backend computes feature vector).
 
 Request:
 
@@ -144,7 +144,7 @@ Request:
 }
 ```
 
-Response shape:
+Response includes prediction plus derived features:
 
 ```json
 {
@@ -164,116 +164,214 @@ Response shape:
 }
 ```
 
-### `GET /model-info`
+## Full Data-to-Prediction Workflow
 
-Returns active model metadata used by the API.
+Run from repository root.
 
----
+### 1) Add New Raw Match Data
 
-## Local Setup
+Place/update Oracle's Elixir exports in `data/raw/`.
 
-Run all backend commands from project root.
+Example files:
 
-### 1) Create and activate virtual environment
+- `data/raw/2025_LoL_OraclesElixir.csv`
+- `data/raw/2026_LoL_OraclesElixir.csv`
 
-```bash
-python -m venv venv
-source venv/bin/activate
-```
-
-### 2) Install backend dependencies
-
-The `backend/requirements.txt` file is currently empty, so install core packages directly:
+### 2) Rebuild Combined Match-Level + Base Feature Data (Script)
 
 ```bash
-pip install fastapi uvicorn pandas scikit-learn joblib pydantic
+python backend/ml/preprocess.py
 ```
 
-### 3) Start backend API
+This regenerates:
+
+- `data/processed/combined_processed_matches.csv`
+- `data/processed/combined_feature_matches.csv`
+
+### 3) Rebuild Phase 3 Rolling Features (Script)
 
 ```bash
-uvicorn backend.app.main:app --reload
+python backend/ml/build_rolling_features.py
 ```
 
-### 4) Start frontend
+This regenerates:
 
-In a second terminal:
+- `data/processed/phase3_rolling_features.csv`
+
+### 4) Build Phase 4 ELO Features
 
 ```bash
-cd frontend
-npm install
-npm run dev
+python backend/ml/features/elo_features.py
 ```
 
-Frontend URL: `http://localhost:5173`
+This reads `data/processed/phase3_rolling_features.csv` and writes:
 
----
+- `data/processed/phase4_elo_features.csv`
 
-## ML Workflow
-
-All commands from project root:
+### 5) Train the Production Model
 
 ```bash
 python backend/ml/train.py
+```
+
+Behavior:
+
+- Trains logistic regression (`max_iter=1000`)
+- Uses chronological split (`80/20`, no shuffle)
+- Saves artifact to `backend/ml/artifacts/logreg_phase4_elo.joblib`
+
+### 6) Evaluate and Log Experiment Metrics
+
+```bash
 python backend/ml/evaluate.py
+```
+
+Behavior:
+
+- Evaluates chronological split (official metric) and random split (diagnostic only)
+- Prints classification reports
+- Appends experiment row to `experiments/results.csv`
+
+Model promotion policy:
+
+- Promoted model selection uses chronological evaluation only.
+- Random split output is diagnostic and is not used for model promotion.
+
+### 7) (Optional) Local Prediction Smoke Test
+
+```bash
 python backend/ml/predict.py
 ```
 
-What each script does:
+### 8) Use Downloaded Web Schedule Export (Default)
 
-- `backend/ml/train.py`: trains Phase 4 logistic regression and saves artifact
-- `backend/ml/evaluate.py`: evaluates artifact on random + chronological splits and logs results
-- `backend/ml/predict.py`: single local prediction smoke test
+Download the latest schedule export from the web and place it at:
 
----
+- Direct CSV download link: https://lol.fandom.com/wiki/Special:CargoExport?tables=MatchSchedule&fields=OverviewPage,Team1,Team2,DateTime_UTC,DateTime_UTC__precision,Patch&where=DateTime_UTC%20%3E%3D%20NOW()%20AND%20(OverviewPage%20LIKE%20%27%25LCK%25%27%20OR%20OverviewPage%20LIKE%20%27%25LPL%25%27%20OR%20OverviewPage%20LIKE%20%27%25LEC%25%27%20OR%20OverviewPage%20LIKE%20%27%25LTA%25%27%20OR%20OverviewPage%20LIKE%20%27%252026%20Mid-Season%20Invitational%25%27)&order_by=DateTime_UTC%20ASC&limit=200&format=csv
 
-## Project Structure
+- `data/raw/schedule_export.csv`
+
+Then normalize it into the pipeline input format:
+
+```bash
+python backend/scripts/scrape_schedule.py
+```
+
+Default output:
+
+- `data/processed/schedule.csv`
+
+### 9) Generate Batch Predictions
+
+```bash
+python backend/scripts/batch_predict.py
+```
+
+Default input/output:
+
+- Input: `data/processed/schedule.csv`
+- Output: `data/predictions/schedule_predictions.csv`
+
+### 10) Update Prediction Results as Matches Finish
+
+```bash
+python backend/ml/update_prediction_results.py --from-oracles-elixir
+```
+
+### 11) Build Coverage Reports
+
+```bash
+python backend/scripts/coverage_summary.py
+```
+
+### 12) One-Command Pipeline Modes
+
+Use the orchestrator script to run common pipeline flows:
+
+```bash
+python backend/scripts/run_pipeline.py --mode full-retrain
+python backend/scripts/run_pipeline.py --mode predict-only
+python backend/scripts/run_pipeline.py --mode sync-only
+```
+
+Notes:
+
+- `full-retrain` runs preprocess -> rolling features -> elo features -> train -> evaluate -> batch predict -> sync -> coverage.
+- `predict-only` runs batch prediction + coverage reporting.
+- `sync-only` runs Oracle's Elixir result sync + coverage reporting.
+
+## Data and Artifacts
+
+- Raw data: `data/raw/`
+- Processed datasets: `data/processed/`
+- Model artifacts: `backend/ml/artifacts/`
+- Experiment history: `experiments/results.csv`
+- Prediction logs: `data/predictions/`
+
+Primary data source: [Oracle's Elixir](https://oracleselixir.com/).
+
+## Repository Layout
 
 ```text
 backend/
   app/
-    main.py
-    models/
-    routes/
-    services/
+    main.py                 # FastAPI app entrypoint
+    routes/predict.py       # API routes
+    services/inference.py   # Team matchup feature construction
+    models/schemas.py       # Pydantic request/response models
   ml/
-    artifacts/
+    train.py
     evaluate.py
     predict.py
-    preprocess.py
-    train.py
-    features/
+    prediction_logger.py
+    update_prediction_results.py
+    artifacts/
+  scripts/
+    scrape_schedule.py
+    batch_predict.py
+frontend/
+  src/
 data/
   raw/
   processed/
-frontend/
-  src/
-notebooks/
-docs/
+  predictions/
+  cache/
 experiments/
 reports/
+notebooks/
+docs/
 ```
 
----
+## Troubleshooting
 
-## Data Source
+### `ModuleNotFoundError` when running scripts
 
-Data comes from [Oracle's Elixir](https://oracleselixir.com/), filtered for team-level complete matches.
+- Run commands from repository root.
+- Ensure virtual environment is activated.
 
-Current working files are stored in:
+### API starts but frontend cannot predict
 
-- `data/raw/`
-- `data/processed/`
+- Confirm backend is running at `127.0.0.1:8000`.
+- Confirm frontend runs at `localhost:5173`.
+- Check browser network tab for failed requests to `/teams` or `/predict-from-teams`.
 
----
+### Team not found for prediction
+
+- Team names must match values returned by `GET /teams`.
+- Verify `data/processed/phase4_elo_features.csv` exists and includes that team.
+
+### Schedule source preference
+
+- Default workflow uses downloaded web schedule exports saved to `data/raw/schedule_export.csv`.
+- The pipeline then normalizes that file with `python backend/scripts/scrape_schedule.py` into `data/processed/schedule.csv`.
 
 ## Roadmap
 
-- [x] Baseline pipeline and model
-- [x] Historical integration (2025 + 2026)
-- [x] Rolling-form feature set
-- [x] ELO feature integration
-- [x] Full-stack prediction flow (FastAPI + React)
-- [ ] Add richer contextual features (patch, region, league strength)
-- [ ] Compare non-linear models (XGBoost/LightGBM)
-- [ ] Add model monitoring and automated retraining workflow
+- [x] Phase 1 baseline
+- [x] Phase 3 rolling-form features
+- [x] Phase 4 ELO-enhanced features
+- [x] API + frontend integration
+- [ ] Full workflow UI integration (trigger schedule import, batch predictions, and result updates from frontend)
+- [ ] Richer context features (patch, league strength)
+- [ ] Alternative models (XGBoost/LightGBM)
+- [ ] Monitoring + retraining automation

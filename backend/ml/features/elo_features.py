@@ -9,6 +9,9 @@ DATE_COLUMN = "date"
 BLUE_TEAM_COLUMN = "blue_team"
 RED_TEAM_COLUMN = "red_team"
 TARGET_COLUMN = "blue_side_win"
+BLUE_GAMES_COLUMN = "blue_team_games"
+RED_GAMES_COLUMN = "red_team_games"
+MIN_GAMES_REQUIRED = 5
 
 STARTING_ELO = 1500
 K_FACTOR = 32
@@ -30,6 +33,8 @@ def main() -> None:
         BLUE_TEAM_COLUMN,
         RED_TEAM_COLUMN,
         TARGET_COLUMN,
+        BLUE_GAMES_COLUMN,
+        RED_GAMES_COLUMN,
     ]
 
     missing = [col for col in required_columns if col not in df.columns]
@@ -40,6 +45,12 @@ def main() -> None:
     df[DATE_COLUMN] = pd.to_datetime(df[DATE_COLUMN], errors="coerce")
     df = df.dropna(subset=[DATE_COLUMN])
     df = df.sort_values(DATE_COLUMN).reset_index(drop=True)
+
+    initial_rows = len(df)
+    df = df[
+        (df[BLUE_GAMES_COLUMN] >= MIN_GAMES_REQUIRED)
+        & (df[RED_GAMES_COLUMN] >= MIN_GAMES_REQUIRED)
+    ].copy()
 
     ratings = {}
 
@@ -84,6 +95,10 @@ def main() -> None:
     df.to_csv(OUTPUT_PATH, index=False)
 
     print(f"Saved Elo feature dataset to: {OUTPUT_PATH}")
+    print(
+        "Rows kept after min-games filter "
+        f"(>= {MIN_GAMES_REQUIRED} for both teams): {len(df)} / {initial_rows}"
+    )
     print(f"Rows: {len(df)}")
     print(f"Unique rated teams: {len(ratings)}")
 

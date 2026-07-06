@@ -1,0 +1,207 @@
+prediction_id,timestamp_utc,blue_team,red_team,predicted_winner,blue_win_probability,red_win_probability,model_name,model_artifact,league,tournament,actual_winner,correct
+916148f6-d547-4d34-a3f5-413ef8a381cf,2026-06-02 03:42:57.204456+00:00,T1,Gen.G,blue,0.64,0.36,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+fae5f7af-aa87-40ef-8982-5277872b9465,2026-06-02 03:49:58.168456+00:00,5M Esports,Epitomy Crash,blue,0.6929,0.3071,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00001,2026-06-02 04:09:42.582975+00:00,Vivo Keyd Stars Academy,KaBuM! Ilha das Lendas,blue,0.5612,0.4388,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00002,2026-06-02 04:10:03.182113+00:00,Verdant,Deer Gaming,blue,0.7058,0.2942,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00003,2026-06-02 04:10:42.789737+00:00,Ruddy Corporation,Arctic Pandas,red,0.2127,0.7873,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00004,2026-06-02 04:11:22.136417+00:00,Karmine Corp,GiantX,blue,0.6558,0.3442,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00005,2026-06-02 04:11:54.920812+00:00,Anyone's Legend,Team WE,blue,0.8163,0.1837,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00006,2026-06-02 04:13:29.797919+00:00,Team Liquid,Shopify Rebellion,blue,0.7275,0.2725,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00007,2026-06-02 04:14:10.207393+00:00,RED Canids,LØS,blue,0.66,0.34,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00008,2026-06-02 04:14:45.288526+00:00,Forsaken,Bomba Team,blue,0.5709,0.4291,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00009,2026-06-02 04:15:16.298610+00:00,Team Vitality,GiantX,blue,0.5685,0.4315,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00010,2026-06-04 05:14:04.165336+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00011,2026-06-04 05:14:04.172928+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00012,2026-06-04 05:14:04.181570+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00013,2026-06-04 05:14:04.190403+00:00,EXILE esports,Ethereal Enigmas,red,0.3425,0.6575,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00014,2026-06-05 03:40:57.018525+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00015,2026-06-05 03:40:57.025556+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00016,2026-06-05 03:40:57.034187+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00017,2026-06-05 03:40:57.042453+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00018,2026-06-05 03:55:45.606538+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00019,2026-06-05 03:55:45.613891+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00020,2026-06-05 03:55:45.622812+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00021,2026-06-05 03:55:45.631235+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00022,2026-06-05 03:55:45.648730+00:00,CCG Esports,Winthrop University,blue,0.61,0.39,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00023,2026-06-05 03:55:45.658056+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00024,2026-06-05 03:55:45.664906+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00025,2026-06-05 03:55:45.674543+00:00,Barça eSports,Movistar KOI Fénix,blue,0.5919,0.4081,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00026,2026-06-05 03:55:45.683702+00:00,CITA Kaizen,Nightbirds,red,0.3887,0.6113,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00027,2026-06-05 03:55:45.692527+00:00,Misa Esports,PCIFIC Esports,blue,0.8444,0.1556,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00028,2026-06-05 03:55:45.702445+00:00,Team Heretics Academy,UCAM Esports,blue,0.6736,0.3264,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00029,2026-06-05 03:55:45.711039+00:00,Verdant,Ruddy Corporation,blue,0.877,0.123,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00030,2026-06-05 03:55:45.731394+00:00,Conviction,CCG Esports,blue,0.5353,0.4647,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00031,2026-06-05 03:55:45.743832+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00032,2026-06-05 03:55:45.762573+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00033,2026-06-05 03:55:45.772126+00:00,Caldya Esport,Project Conquerors,blue,0.5396,0.4604,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00034,2026-06-05 03:55:45.779681+00:00,EXILE esports Academy,Ethereal Enigmas,red,0.4542,0.5458,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00035,2026-06-05 03:55:45.860217+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00036,2026-06-05 03:55:45.903946+00:00,FURIA,LØS,blue,0.7363,0.2637,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00037,2026-06-05 03:55:45.912403+00:00,Frites Esports Club,mCon esports,blue,0.8396,0.1604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00038,2026-06-05 03:55:45.924312+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00039,2026-06-05 03:55:45.944178+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00040,2026-06-05 03:55:45.958107+00:00,Andromeda Gaming,Priority,red,0.3921,0.6079,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00041,2026-06-05 03:55:46.024165+00:00,LOUD,Vivo Keyd Stars,blue,0.5502,0.4498,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00042,2026-06-05 03:55:46.033134+00:00,RED Canids,Leviatan,blue,0.8,0.2,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00043,2026-06-05 03:55:46.041649+00:00,Fluxo W7M,paiN Gaming,blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00044,2026-06-05 03:55:46.094396+00:00,Fortress Esports,AaB Esport,blue,0.605,0.395,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00045,2026-06-05 03:55:46.131888+00:00,Fuego,G3V E-sports,blue,0.7364,0.2636,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00046,2026-06-05 03:55:46.147132+00:00,Golden Lions,Volticons,blue,0.6182,0.3818,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00047,2026-06-05 03:55:46.181902+00:00,Saigon Warriors,SN CyberCore Esports,blue,0.7022,0.2978,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00048,2026-06-05 03:58:00.272929+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00049,2026-06-05 03:58:00.280757+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00050,2026-06-05 03:58:00.290172+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00051,2026-06-05 03:58:00.299300+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00052,2026-06-05 03:58:00.308674+00:00,CCG Esports,Winthrop University,blue,0.61,0.39,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00053,2026-06-05 03:58:00.318617+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00054,2026-06-05 03:58:00.325823+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00055,2026-06-05 03:58:00.336490+00:00,Barça eSports,Movistar KOI Fénix,blue,0.5919,0.4081,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00056,2026-06-05 03:58:00.346408+00:00,CITA Kaizen,Nightbirds,red,0.3887,0.6113,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00057,2026-06-05 03:58:00.355981+00:00,Misa Esports,PCIFIC Esports,blue,0.8444,0.1556,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00058,2026-06-05 03:58:00.366732+00:00,Team Heretics Academy,UCAM Esports,blue,0.6736,0.3264,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00059,2026-06-05 03:58:00.375311+00:00,Verdant,Ruddy Corporation,blue,0.877,0.123,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00060,2026-06-05 03:58:00.385983+00:00,Conviction,CCG Esports,blue,0.5353,0.4647,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00061,2026-06-05 03:58:00.399083+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00062,2026-06-05 03:58:00.407178+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00063,2026-06-05 03:58:00.416119+00:00,Caldya Esport,Project Conquerors,blue,0.5396,0.4604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00064,2026-06-05 03:58:00.424169+00:00,EXILE esports Academy,Ethereal Enigmas,red,0.4542,0.5458,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00065,2026-06-05 03:58:00.439578+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00066,2026-06-05 03:58:00.452647+00:00,FURIA,LØS,blue,0.7363,0.2637,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00067,2026-06-05 03:58:00.461565+00:00,Frites Esports Club,mCon esports,blue,0.8396,0.1604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00068,2026-06-05 03:58:00.472397+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00069,2026-06-05 03:58:00.479643+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00070,2026-06-05 03:58:00.488084+00:00,Andromeda Gaming,Priority,red,0.3921,0.6079,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00071,2026-06-05 03:58:00.502892+00:00,LOUD,Vivo Keyd Stars,blue,0.5502,0.4498,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00072,2026-06-05 03:58:00.512524+00:00,RED Canids,Leviatan,blue,0.8,0.2,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00073,2026-06-05 03:58:00.521638+00:00,Fluxo W7M,paiN Gaming,blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00074,2026-06-05 03:58:00.529738+00:00,Fortress Esports,AaB Esport,blue,0.605,0.395,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00075,2026-06-05 03:58:00.538368+00:00,Fuego,G3V E-sports,blue,0.7364,0.2636,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00076,2026-06-05 03:58:00.546138+00:00,Golden Lions,Volticons,blue,0.6182,0.3818,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00077,2026-06-05 03:58:00.554879+00:00,Saigon Warriors,SN CyberCore Esports,blue,0.7022,0.2978,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00078,2026-06-05 03:58:52.130760+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00079,2026-06-05 03:58:52.138866+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00080,2026-06-05 03:58:52.148531+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00081,2026-06-05 03:58:52.157814+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00082,2026-06-05 03:58:52.167990+00:00,CCG Esports,Winthrop University,blue,0.61,0.39,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00083,2026-06-05 03:58:52.177878+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00084,2026-06-05 03:58:52.185542+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00085,2026-06-05 03:58:52.195862+00:00,Barça eSports,Movistar KOI Fénix,blue,0.5919,0.4081,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00086,2026-06-05 03:58:52.205982+00:00,CITA Kaizen,Nightbirds,red,0.3887,0.6113,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00087,2026-06-05 03:58:52.215475+00:00,Misa Esports,PCIFIC Esports,blue,0.8444,0.1556,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00088,2026-06-05 03:58:52.226249+00:00,Team Heretics Academy,UCAM Esports,blue,0.6736,0.3264,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00089,2026-06-05 03:58:52.235203+00:00,Verdant,Ruddy Corporation,blue,0.877,0.123,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00090,2026-06-05 03:58:52.246005+00:00,Conviction,CCG Esports,blue,0.5353,0.4647,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00091,2026-06-05 03:58:52.259120+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00092,2026-06-05 03:58:52.267472+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00093,2026-06-05 03:58:52.275911+00:00,Caldya Esport,Project Conquerors,blue,0.5396,0.4604,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00094,2026-06-05 03:58:52.284135+00:00,EXILE esports Academy,Ethereal Enigmas,red,0.4542,0.5458,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00095,2026-06-05 03:58:52.299227+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00096,2026-06-05 03:58:52.312150+00:00,FURIA,LØS,blue,0.7363,0.2637,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00097,2026-06-05 03:58:52.321176+00:00,Frites Esports Club,mCon esports,blue,0.8396,0.1604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00098,2026-06-05 03:58:52.331858+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00099,2026-06-05 03:58:52.339279+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00100,2026-06-05 03:58:52.347635+00:00,Andromeda Gaming,Priority,red,0.3921,0.6079,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00101,2026-06-05 03:58:52.362382+00:00,LOUD,Vivo Keyd Stars,blue,0.5502,0.4498,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00102,2026-06-05 03:58:52.372135+00:00,RED Canids,Leviatan,blue,0.8,0.2,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00103,2026-06-05 03:58:52.381400+00:00,Fluxo W7M,paiN Gaming,blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00104,2026-06-05 03:58:52.392158+00:00,Cloud9,LYON (2024 American Team),blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00105,2026-06-05 03:58:52.400247+00:00,Fortress Esports,AaB Esport,blue,0.605,0.395,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00106,2026-06-05 03:58:52.408914+00:00,Fuego,G3V E-sports,blue,0.7364,0.2636,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00107,2026-06-05 03:58:52.417089+00:00,Golden Lions,Volticons,blue,0.6182,0.3818,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00108,2026-06-05 03:58:52.425549+00:00,Saigon Warriors,SN CyberCore Esports,blue,0.7022,0.2978,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00109,2026-06-05 03:59:16.199091+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00110,2026-06-05 03:59:16.208166+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00111,2026-06-05 03:59:16.218359+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00112,2026-06-05 03:59:16.227959+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00113,2026-06-05 03:59:16.238030+00:00,CCG Esports,Winthrop University,blue,0.61,0.39,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00114,2026-06-05 03:59:16.248418+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00115,2026-06-05 03:59:16.255881+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00116,2026-06-05 03:59:16.266349+00:00,Barça eSports,Movistar KOI Fénix,blue,0.5919,0.4081,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00117,2026-06-05 03:59:16.276218+00:00,CITA Kaizen,Nightbirds,red,0.3887,0.6113,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00118,2026-06-05 03:59:16.285760+00:00,Misa Esports,PCIFIC Esports,blue,0.8444,0.1556,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00119,2026-06-05 03:59:16.296599+00:00,Team Heretics Academy,UCAM Esports,blue,0.6736,0.3264,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00120,2026-06-05 03:59:16.305557+00:00,Verdant,Ruddy Corporation,blue,0.877,0.123,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00121,2026-06-05 03:59:16.316914+00:00,Conviction,CCG Esports,blue,0.5353,0.4647,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00122,2026-06-05 03:59:16.330952+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00123,2026-06-05 03:59:16.340818+00:00,Oxygen Gaming,UCAM University Esports,red,0.3415,0.6585,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00124,2026-06-05 03:59:16.349012+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00125,2026-06-05 03:59:16.358095+00:00,Caldya Esport,Project Conquerors,blue,0.5396,0.4604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00126,2026-06-05 03:59:16.366533+00:00,EXILE esports Academy,Ethereal Enigmas,red,0.4542,0.5458,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00127,2026-06-05 03:59:16.382019+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00128,2026-06-05 03:59:16.395224+00:00,FURIA,LØS,blue,0.7363,0.2637,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00129,2026-06-05 03:59:16.404583+00:00,Frites Esports Club,mCon esports,blue,0.8396,0.1604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00130,2026-06-05 03:59:16.415609+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00131,2026-06-05 03:59:16.423069+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00132,2026-06-05 03:59:16.432457+00:00,Andromeda Gaming,Priority,red,0.3921,0.6079,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00133,2026-06-05 03:59:16.448275+00:00,LOUD,Vivo Keyd Stars,blue,0.5502,0.4498,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00134,2026-06-05 03:59:16.458299+00:00,RED Canids,Leviatan,blue,0.8,0.2,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00135,2026-06-05 03:59:16.467503+00:00,Fluxo W7M,paiN Gaming,blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00136,2026-06-05 03:59:16.477998+00:00,Cloud9,LYON (2024 American Team),blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00137,2026-06-05 03:59:16.486119+00:00,Fortress Esports,AaB Esport,blue,0.605,0.395,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00138,2026-06-05 03:59:16.495553+00:00,Fuego,G3V E-sports,blue,0.7364,0.2636,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00139,2026-06-05 03:59:16.504064+00:00,Golden Lions,Volticons,blue,0.6182,0.3818,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00140,2026-06-05 03:59:16.512833+00:00,Saigon Warriors,SN CyberCore Esports,blue,0.7022,0.2978,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00141,2026-06-05 04:01:50.268862+00:00,L Guide Gaming,RAYN Clocks,blue,0.6153,0.3847,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00142,2026-06-05 04:01:50.276948+00:00,Rising Gaming,FENNEL,red,0.387,0.613,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00143,2026-06-05 04:01:50.286447+00:00,Movistar KOI Fénix,UCAM Esports,red,0.4781,0.5219,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00144,2026-06-05 04:01:50.295348+00:00,Priority,Diversion Gaming,blue,0.6307,0.3693,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00145,2026-06-05 04:01:50.304987+00:00,CCG Esports,Winthrop University,blue,0.61,0.39,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00146,2026-06-05 04:01:50.314792+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00147,2026-06-05 04:01:50.322279+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00148,2026-06-05 04:01:50.332489+00:00,Barça eSports,Movistar KOI Fénix,blue,0.5919,0.4081,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00149,2026-06-05 04:01:50.342256+00:00,CITA Kaizen,Nightbirds,red,0.3887,0.6113,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00150,2026-06-05 04:01:50.351594+00:00,Misa Esports,PCIFIC Esports,blue,0.8444,0.1556,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00151,2026-06-05 04:01:50.362097+00:00,Team Heretics Academy,UCAM Esports,blue,0.6736,0.3264,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00152,2026-06-05 04:01:50.370825+00:00,Verdant,Ruddy Corporation,blue,0.877,0.123,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00153,2026-06-05 04:01:50.381581+00:00,Conviction,CCG Esports,blue,0.5353,0.4647,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00154,2026-06-05 04:01:50.394831+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00155,2026-06-05 04:01:50.403850+00:00,Oxygen Gaming,UCAM University Esports,red,0.3415,0.6585,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00156,2026-06-05 04:01:50.411622+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00157,2026-06-05 04:01:50.420140+00:00,Caldya Esport,Project Conquerors,blue,0.5396,0.4604,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00158,2026-06-05 04:01:50.428164+00:00,EXILE esports Academy,Ethereal Enigmas,red,0.4542,0.5458,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00159,2026-06-05 04:01:50.442882+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00160,2026-06-05 04:01:50.456056+00:00,FURIA,LØS,blue,0.7363,0.2637,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00161,2026-06-05 04:01:50.464976+00:00,Frites Esports Club,mCon esports,blue,0.8396,0.1604,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00162,2026-06-05 04:01:50.475858+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00163,2026-06-05 04:01:50.482931+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00164,2026-06-05 04:01:50.491123+00:00,Andromeda Gaming,Priority,red,0.3921,0.6079,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00165,2026-06-05 04:01:50.505864+00:00,LOUD,Vivo Keyd Stars,blue,0.5502,0.4498,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00166,2026-06-05 04:01:50.515338+00:00,RED Canids,Leviatan,blue,0.8,0.2,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00167,2026-06-05 04:01:50.524477+00:00,Fluxo W7M,paiN Gaming,blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00168,2026-06-05 04:01:50.534989+00:00,Cloud9,LYON (2024 American Team),blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00169,2026-06-05 04:01:50.542890+00:00,Fortress Esports,AaB Esport,blue,0.605,0.395,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00170,2026-06-05 04:01:50.551812+00:00,Fuego,G3V E-sports,blue,0.7364,0.2636,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00171,2026-06-05 04:01:50.560226+00:00,Golden Lions,Volticons,blue,0.6182,0.3818,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00172,2026-06-05 04:01:50.569343+00:00,Saigon Warriors,SN CyberCore Esports,blue,0.7022,0.2978,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00173,2026-06-05 04:18:45.509708+00:00,MVK Esports,GAM Esports,red,0.4036,0.5964,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00174,2026-06-05 04:18:45.518142+00:00,Anyone's Legend,LGD Gaming,blue,0.588,0.412,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00175,2026-06-05 04:18:45.533306+00:00,Dplus Kia,HANJIN BRION,blue,0.687,0.313,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00176,2026-06-05 04:18:45.542371+00:00,JD Gaming,Bilibili Gaming,red,0.3917,0.6083,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00177,2026-06-05 04:18:45.558104+00:00,Movistar KOI,Karmine Corp,red,0.4903,0.5097,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00178,2026-06-05 04:18:45.571041+00:00,FlyQuest,Team Liquid,blue,0.5494,0.4506,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00179,2026-06-05 04:18:45.578992+00:00,Top Esports,Team WE,blue,0.7287,0.2713,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00180,2026-06-05 04:18:45.591545+00:00,Cloud9,LYON (2024 American Team),blue,0.5858,0.4142,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00181,2026-06-05 04:22:39.915123+00:00,MVK Esports,GAM Esports,red,0.3873,0.6127,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00182,2026-06-05 04:22:39.923057+00:00,Anyone's Legend,LGD Gaming,blue,0.5432,0.4568,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00183,2026-06-05 04:22:39.937479+00:00,Dplus Kia,HANJIN BRION,blue,0.6846,0.3154,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00184,2026-06-05 04:22:39.945816+00:00,JD Gaming,Bilibili Gaming,red,0.4284,0.5716,Logistic Regression,logreg_phase4_elo.joblib,,,red,True
+PRED-00185,2026-06-05 04:22:39.960192+00:00,Movistar KOI,Karmine Corp,red,0.4937,0.5063,Logistic Regression,logreg_phase4_elo.joblib,,,blue,False
+PRED-00186,2026-06-05 04:22:39.972061+00:00,FlyQuest,Team Liquid,blue,0.5526,0.4474,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00187,2026-06-05 04:22:39.979412+00:00,Top Esports,Team WE,blue,0.7474,0.2526,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00188,2026-06-05 04:22:39.991041+00:00,Cloud9,LYON (2024 American Team),blue,0.58,0.42,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00189,2026-06-08 04:51:49.012704+00:00,Cloud9,Dignitas,blue,0.8414,0.1586,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00190,2026-06-08 04:51:49.021824+00:00,Cloud9,Velocity eSports,blue,0.852,0.148,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00191,2026-06-08 05:09:09.469846+00:00,Cloud9,Dignitas,blue,0.8414,0.1586,Logistic Regression,logreg_phase4_elo.joblib,,,red,False
+PRED-00192,2026-06-08 05:09:09.478964+00:00,Cloud9,Velocity eSports,blue,0.852,0.148,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00193,2026-06-08 05:09:24.847154+00:00,Cloud9,Dignitas,blue,0.8414,0.1586,Logistic Regression,logreg_phase4_elo.joblib,,,blue,True
+PRED-00194,2026-06-08 05:09:24.857222+00:00,Cloud9,Velocity eSports,blue,0.852,0.148,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00195,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,,,,
+PRED-00196,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00197,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00198,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00199,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00200,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00201,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00202,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00203,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,
+PRED-00204,,Brod n Friends,Bulldog Academy,red,0.3014,0.6986,Logistic Regression,logreg_phase4_elo.joblib,4 Nations,4 Nations/2026 Season/Summer Split,,

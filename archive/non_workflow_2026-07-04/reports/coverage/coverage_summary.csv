@@ -1,0 +1,2 @@
+schedule_rows,predictions_generated,filtered_rows,skipped_missing_history,coverage_rate,usable_rate,filtered_rate,missing_history_rate
+100,1,100,46,0.01,0.47,1.0,0.46
